@@ -1,0 +1,15 @@
+# Core analysis stack. Versions are lower bounds, not pins: the runs used the
+# then-current releases and nothing here depends on version-specific behaviour.
+pandas>=2.0
+numpy>=1.24
+pyarrow>=14.0
+scipy>=1.10
+matplotlib>=3.7
+
+# Model calls -- only needed to RE-RUN the sweep. Scoring and analysis of the
+# saved responses need nothing from this section.
+anthropic>=0.40
+
+# Only for scripts/xval_rouge.py, which cross-checks the in-repo ROUGE against
+# the reference implementation.
+rouge-score>=0.1.2
